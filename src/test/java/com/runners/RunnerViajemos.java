@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/stepsdefinitions/definitions",
         snippets = CucumberOptions.SnippetType.CAMELCASE,
-        tags = "@CrearReserva_SinLogin"
+        tags = "@ReservaAuto"
 )
 public class RunnerViajemos {
 }

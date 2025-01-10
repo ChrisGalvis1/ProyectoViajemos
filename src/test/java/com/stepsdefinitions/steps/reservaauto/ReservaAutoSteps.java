@@ -26,4 +26,17 @@ public class ReservaAutoSteps extends ReservaAutoPage {
     public void validaraLaInformacionDeLosAutosDisponibles() {
         reservaAutoPage.validaraLaInformacionDeLosAutosDisponibles();
     }
+
+    @Step
+    public void diligenciarDatosDelMedioDePagoTarjetaDeCredito(String nombreUsuario, String email, String telefono, String numeroTarjeta, String titularTarjeta, String fecha, String cvv) {
+        reservaAutoPage.seleccionarAutoReservar();
+        reservaAutoPage.ingresarNombreUsuarioTarjeta(nombreUsuario);
+        reservaAutoPage.ingresarEmailUsuarioTarjeta(email);
+        reservaAutoPage.ingresarTelefonoUsuarioTarjeta(telefono);
+        reservaAutoPage.ingresarNumeroTarjeta(numeroTarjeta);
+        reservaAutoPage.ingresarTitularTarjeta(titularTarjeta);
+        reservaAutoPage.ingresarFechaTarjeta(fecha);
+        reservaAutoPage.ingresarCvvTarjeta(cvv);
+        reservaAutoPage.darClickPagarAhora();
+    }
 }

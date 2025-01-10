@@ -83,4 +83,60 @@ public class ReservaAutoUI extends PageObject {
     public WebElement getBtnBuscar(){
         return btnBuscar;
     }
+
+    @FindBy(xpath = "//div[@class='d-grid y gap-L']//input[@id='inpName']")
+    WebElementFacade txtNombreUsuario;
+
+    public WebElement getTxtNombreUsuario(){
+        return txtNombreUsuario;
+    }
+
+    @FindBy(xpath = "//div[@class='d-grid y gap-L']//input[@id='inpEmail']")
+    WebElementFacade txtEmail;
+
+    public WebElement getTxtEmail(){
+        return txtEmail;
+    }
+
+    @FindBy(xpath = "//div[@class='d-grid y gap-L']//input[@id='phoneCustom']")
+    WebElementFacade txtTelefono;
+
+    public WebElement getTxtTelefono(){
+        return txtTelefono;
+    }
+
+    @FindBy(xpath = "//*[@id='credit-card-number']")
+    WebElementFacade txtNumeroTarjeta;
+
+    public WebElement getTxtNumeroTarjeta(){
+        return txtNumeroTarjeta;
+    }
+
+    @FindBy(xpath = "//div[@data-payment='CreditCard']//div[@class='grid-credit']//div[@id='expireDate']")
+    WebElementFacade txtMesTarjeta;
+
+    public WebElement getTxtMesTarjeta(){
+        return txtMesTarjeta;
+    }
+
+    @FindBy(xpath = "//div[@data-payment='CreditCard']//div[@class='grid-credit']//div[@id='cardholder-name']")
+    WebElementFacade txtTitularTarjeta;
+
+    public WebElement getTitularTarjeta(){
+        return txtTitularTarjeta;
+    }
+
+    @FindBy(xpath = "//div[@data-payment='CreditCard']//div[@class='grid-credit']//div[@id='cvv']")
+    WebElementFacade txtCvvTarjeta;
+
+    public WebElement getTxtCvvTarjeta(){
+        return txtCvvTarjeta;
+    }
+
+    @FindBy(xpath = "//div[@data-payment='CreditCard']//div//*[text()='PAGAR AHORA']")
+    WebElementFacade btnPagarAhora;
+
+    public WebElement getBtnPagarAhora(){
+        return btnPagarAhora;
+    }
 }

@@ -40,7 +40,10 @@ Feature: Reservas de Autos
       | NombreAeropuertoRecogida   | NombreAeropuertoDevolucion   | MesRecogida   | DiaRecogida   | MesDevolucion   | DiaDevolucion   |
       | <NombreAeropuertoRecogida> | <NombreAeropuertoDevolucion> | <MesRecogida> | <DiaRecogida> | <MesDevolucion> | <DiaDevolucion> |
     Then Validara la informacion de los autos disponibles
+    And Diligenciar datos del medio de pago tarjeta de credito
+      | Nombre   | Email   | Telefono   | NumeroTarjeta   | TitularTarjeta   | Fecha   | CVV   |
+      | <Nombre> | <Email> | <Telefono> | <NumeroTarjeta> | <TitularTarjeta> | <Fecha> | <CVV> |
 
     Examples:
-      | NombreAeropuertoRecogida | NombreAeropuertoDevolucion | MesRecogida | DiaRecogida | MesDevolucion | DiaDevolucion |
-      | Aeropuerto de Barcelona  | Aeropuerto de Madrid       | Julio       | 20          | Julio         | 22            |
+      | NombreAeropuertoRecogida | NombreAeropuertoDevolucion | MesRecogida | DiaRecogida | MesDevolucion | DiaDevolucion | Nombre   | Email                        | Telefono   | NumeroTarjeta    | TitularTarjeta | Fecha | CVV |
+      | Aeropuerto de Barcelona  | Aeropuerto de Madrid       | Julio       | 20          | Julio         | 22            | PruebaQA | pruebaviajemosqa@yopmail.com | 3112223366 | 5970100300000067 | PruebaQA       | 0928  | 123 |
